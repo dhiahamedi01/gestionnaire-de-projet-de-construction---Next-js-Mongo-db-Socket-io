@@ -1,0 +1,127 @@
+.groupe{
+    width: 77%;
+    height: 40%;
+    display: flex;
+    align-items:center ;
+    margin-top: 100px;
+    margin-left: 20%;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+}
+.label {
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    margin-left: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+.date{
+    padding: 5px;
+    width: 17rem;
+    border-radius: 3px;
+    border: 1px solid #999999;
+    height: 40.5px;
+    margin: 15px;
+    text-align: center;
+    outline: none;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+  }
+.nom{
+    padding: 5px;
+    width: 17rem;
+    border-radius: 3px;
+    border: 1px solid #999999;
+    height: 39.5px;
+    margin: 15px;
+    outline: none;
+}
+.search{
+    background-color: #e09900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 12rem;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: -23px;
+    margin-left: 28px;
+}
+.select-groupe{
+  height: 40px;
+  border: 1px solid #999999;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  margin: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+.select-groupe select{
+  width: 17rem;
+  height: 40px;
+  border: 1px solid #999999;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+.select-groupe select option{
+  background: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  padding: 0px 2px 1px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .groupe{
+    zoom: 0.9;
+  }}
+@media screen and (max-width: 700px) {
+  .groupe{
+    zoom: 0.8;
+    display: block;
+    width: 340px;
+    height: 420px;
+    padding: 10px 30px;
+    margin-left: 32%;
+    border-radius: 8px;
+  }
+  .block{
+    margin: 10px;
+  }
+  .label,.date,.nom{
+    width: 230px;
+  }
+  .select-groupe{
+    width: 230px;
+  }
+  .select-groupe select{
+    width: 230px;
+  }
+  .search{
+    width: 230px;
+    margin-top: 30px;
+  }
+}

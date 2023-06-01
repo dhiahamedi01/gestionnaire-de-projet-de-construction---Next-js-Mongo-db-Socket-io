@@ -1,0 +1,93 @@
+.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 16%;
+  background: #252525;
+  transition: all 0.5s ease;
+  
+}
+.sidebar.active{
+  width: 60px;
+}
+.sidebar .logodetails{
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logodetails i{
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center
+}
+.sidebar .logodetails .logoname{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 22px;
+}
+.sidebar .navlinks{
+  margin-top: 30px;
+}
+.sidebar .navlinks li{
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+.sidebar .navlinks li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  padding: 1%;
+}
+.dropdwn{
+  transition: 5s;
+}
+.sidebar .navlinks li a.active{
+  background: #e09900;
+}
+.sidebar .navlinks li a:hover{
+  background: #e09900;
+  transition: 0.5s;
+}
+.sidebar .navlinks li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.sidebar .navlinks li a .span{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 10px;
+}
+.sidebar .navlinks .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 1350px) {
+  .sidebar{
+    width: 60px;
+  }
+  .sidebar .logodetails .logoname{
+    padding: 90px;
+    opacity: 0;
+  }
+  .sidebar .navlinks li a .span{
+    font-size: 0px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .sidebar{
+    zoom: 0.9;
+  }
+
+  }

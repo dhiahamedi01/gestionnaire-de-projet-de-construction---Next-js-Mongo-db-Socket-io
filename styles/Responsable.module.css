@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.form{
+    height: 100%;
+    width: 100%;
+}
+.title{
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    text-align: center !important;
+    justify-content: center;
+    margin-left: 35%;
+    letter-spacing: 1px;
+}
+.title2{
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    text-align: center !important;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+.groupe1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+}
+.input{
+    width: 48%;
+}
+.sousForm{
+    margin-top: 5%;
+}
+.btn{
+    width: 80%;
+    margin-left: 10% !important;
+    margin-top: 3% !important;
+    background-color:#e09900 !important;
+}
+.btn:hover{
+    background-color:#cb8d05 !important;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 60%;
+    height: 60%;
+  }
+  .modal2 {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 70%;
+    flex-direction: column;
+    overflow-y: auto;
+    height:94vh;
+  }
+  
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000; 
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .close{
+    background-color: #f44336;
+    color: white;
+    width: 50px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  .Radio{
+    width: 47%;
+    margin-top: -1%;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+  }
+  .pluit{
+    margin-left: 35%;
+  }
+  .titlep{
+    margin-left: 2%;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  @media screen and (max-width: 1600px) {
+    .form{
+      zoom: 0.9;
+    }}

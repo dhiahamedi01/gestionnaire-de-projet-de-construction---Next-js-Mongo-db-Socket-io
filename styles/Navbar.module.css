@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.nav{
+  display: flex;
+  justify-content: space-between;
+  height:9%;
+  background: #fff;
+  display: flex;
+  z-index: 999;
+  align-items: center;
+  position: fixed;
+  width: 84%;
+  left: 16%;
+  padding: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.nav .profiledetails{
+  display: flex;
+  align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+}
+.nav .profiledetails .image{
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.nav .profiledetails .admin{
+  font-size: 19px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+}
+.dashboard{
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .nav{
+    width: 87%;
+    left: 13%;
+  }
+  .nav .profiledetails .admin{
+    font-size: 0px;
+  }
+  .nav .profiledetails{
+    min-width: 30px;
+    padding: 0 15px 0 2px;
+  }
+}
+@media (max-width: 1200px) {
+  .nav{
+    width: 90%;
+    left: 13%;
+  }
+  .nav .profiledetails .admin{
+    font-size: 0px;
+  }
+  .nav .profiledetails{
+    min-width: 30px;
+    padding: 0 15px 0 2px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .nav{
+    zoom: 0.9;
+  }
+
+  }

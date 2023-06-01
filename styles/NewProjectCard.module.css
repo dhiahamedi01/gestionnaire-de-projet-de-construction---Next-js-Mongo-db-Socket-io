@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.card {
+    background-color: #fff;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    margin-left: 2%;
+
+  }
+  .icon {
+    font-size: 62px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .button {
+    background-color: #e09900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .button:hover {
+    background-color: #ca8d0a;
+  }
+  .button svg {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    .card{
+      zoom: 0.9;
+    }
+  
+    }
+/* Styles pour le modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  outline: none;
+  width: 70%;
+  height: calc(90% 10px);
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  display:flex;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.166);
+  z-index: 2000; 
+}
+.modal .header{
+  display: flex;
+  justify-content: space-between;
+}
+.titreform{
+  font-family: 'Oswald', sans-serif;
+  white-space: nowrap;
+  text-align: center !important;
+  justify-content: center;
+  margin-left: 40.4%;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'Oswald', sans-serif;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.groupe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.groupe label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.date-input {
+  padding: 5px;
+  width: 20rem;
+  border-radius: 3px;
+  border: 1px solid #5c5c5c;
+  height: 40px;
+  margin-top: 1px;
+  text-align: center;
+  outline: none;
+}
+.Devise{
+  margin-left: 10.7%;
+}
+.file{
+  height: 40px;
+  border-radius: 5px;
+  
+}
+.groupe .file-input{
+height: 40px;
+opacity: 0;
+width: 250px;
+border-radius: 5px;
+
+}
+.file label{
+  height: 40px;
+  width: 20rem;
+  background-color: #ca8d0a;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+
+}
+.client{
+  padding-left: 40px;
+  width: 20rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  height: 40px;
+  padding-left: 10%;
+}
+.Rue{
+  margin-top: 10px;
+}
+.modal  input[type="text"],
+.modal textarea,
+.modal input[type="number"] {
+  border: 1px solid;
+  border-color: #7c7c7c;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+.modal textarea{
+  height: 100px;
+}
+.select-wrapper {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.localisation,.Municip{
+  height: 40px;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 0.5;
+  appearance: menulist; 
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  transform-origin: top; 
+  transform: scaleY(1);
+  
+}
+
+.localisation select,.Municip select{
+  width: 20rem;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 0 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+}
+.localisation select option,.Municip select option{
+  background: white;
+  white-space: pre;
+  padding: 0px 2px 1px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  transform: scaleY(-1);
+}
+.select-wrapper select {
+  width: 100%;
+  height: 40px;
+  padding: 0.5rem;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+.select-wrapper select option {
+  color: black;
+  background: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  padding: 0px 2px 1px;
+  font-family: 'Oswald', sans-serif;
+}
+.select-client select{
+  width: 20rem;
+  padding: 0.5rem;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+.select-groupe select{
+  width: 20rem;
+  padding: 0.5rem;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  margin-left: 10.7%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.select-groupe select option ,.select-client select option{
+  color: black;
+  background: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.modal button[type="submit"],
+.modal button[type="button"] {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.modal button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 30px;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.modal button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  margin-top: 10px;
+}
+
+.modal button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+@media screen and (max-width: 1600px) {
+  .modal{
+    zoom: 0.9;
+  }}
+  @media screen and (max-width: 700px) {
+    .modal{
+      zoom: 0.45;
+    }}
+  

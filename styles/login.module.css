@@ -1,0 +1,227 @@
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.img{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.img1{
+	display: flex;
+}
+.logo{
+	height: 50px !important;
+	width: 50px;
+	border-radius: 50%;
+	border: 0.7px solid;
+	padding: 10px;
+	margin-left: 5.5%;
+	margin-top: 6%;
+}
+.loginContent{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+    width: 100%;
+	height: 95%;
+	margin-top: 3%;
+}
+.alert{
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+.inscription{
+	width: 100%;
+}	
+.groupe{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.header{
+	position: relative;
+	margin-top: 30%;
+}
+.alert{
+	margin-left: 4%;
+}
+.cnx{
+	margin-top: 7%;
+	position: relative;
+	display: block;
+	padding: 10px;
+}
+.input{
+	width: 50%;
+	margin: 5px;
+}
+.img .bg{
+	width: 500px;
+    margin-right: 20%;
+    margin-top: 55%;
+}
+
+.form{
+	width: 400px;
+	margin-left: 12%;
+}
+.form1{
+	margin-top: 10%;
+	width: 100%;
+}
+
+.loginContent img{
+    height: 100px;
+}
+ .title{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+.title2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.input{
+margin: 15px;
+width: 100%;
+}
+
+.forgot{
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+.inscri{
+	display: block;
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+	margin-top: 9%;
+	margin-left: 15%;
+}
+.forgot:hover{
+	color: #d6a437;
+}
+.inscri:hover{
+	color: #d6a437;
+}
+
+.btn{
+	display: block;
+	width: 95%;
+	height: 50px;
+	border-radius:10px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #d29d2c, #daa637, #c39531);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+    align-items: center;
+    margin-left: 6%;
+}
+.btn:hover{
+	background-position: right;
+}
+.btn1{
+	display: block;
+	width: 95%;
+	height: 50px;
+	border-radius:10px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #d29d2c, #daa637, #c39531);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+    align-items: center;
+    margin-left: 2.5%;
+}
+.btn1:hover{
+	background-position: right;
+}
+
+.Box{
+	margin-bottom: -20%;
+	margin-left: -60%;
+}
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.form{
+		width: 290px;
+	}
+
+	.loginContent .title{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img .bg{
+		width: 400px;
+	}
+    .input{
+        margin: 15px;
+    }
+        
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.loginContent{
+		justify-content: center;
+	}
+    .input{
+        margin-left: -40px;
+    }
+}

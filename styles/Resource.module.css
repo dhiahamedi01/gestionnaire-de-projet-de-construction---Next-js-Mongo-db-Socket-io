@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.groupe{
+  display: flex;
+}
+.title{
+  text-align: center;
+  margin: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+.nom{
+  width: 90%;
+  margin: 20px;
+}
+.desc{
+  width: 90%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.Resource{
+    background-color: #4caf50 !important;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 15rem;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 1%;
+    margin-left: 20% !important;
+    text-align: center;
+}
+.employe{
+  background-color: #e09900 !important;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 15rem;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 19% !important;
+  text-align: center;
+  margin-top: 5% !important;
+}
+.Resource:hover{
+  background-color: #4caf50;
+}
+.employe:hover{
+  background-color: #4caf50;
+}
+.two{
+  display: flex;
+  margin-left: 1%;
+  margin-top: 3%;
+}
+.select-wrapper {
+  margin-bottom: 16px;
+  position: relative;
+  width: 150%;
+  height: 3%;
+  margin-top: 0.6%;
+}
+.select-wrapper select {
+  width: 36%;
+  margin-left: 8%;
+  height: 56.5px;
+  text-align: center;
+  border: 1px solid #b8b8b8;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  appearance: none;
+  outline: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+.select-wrapper select option {
+  color: black;
+  background: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  padding: 0px 2px 1px;
+  font-family: 'Oswald', sans-serif;
+}
+.price{
+  width: 45%;
+  left: 0.5%;
+}
+.ajoute{
+  background-color: #4caf50 !important;
+  margin-top: 9%;
+  width: 90%;
+  left: 2%;
+}
+.sousform{
+  margin-top: 8.5%;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 70%;
+    height: 90%;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000; 
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+.Quant{
+  width: 45%;
+  left: 0.5%;
+}
+.pied2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
