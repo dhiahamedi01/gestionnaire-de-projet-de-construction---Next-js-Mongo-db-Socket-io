@@ -6,11 +6,11 @@ dbConnect()
 
 
 const handler = nc().post(async(req, res) => {
-    const {mat,nom,desc,price} = req.body
+    const {mat,nom,desc,unit,price} = req.body
 
     const maxId = await Matriel.findOne().sort({ id: -1 }).select('id');
     const newId = (maxId ? maxId.id + 1 : 1);
-    const newMatriel = new Matriel({id: newId,mat,nom,desc,price})
+    const newMatriel = new Matriel({id: newId,mat,nom,desc,unit,price})
     
     try {
          await newMatriel.save()

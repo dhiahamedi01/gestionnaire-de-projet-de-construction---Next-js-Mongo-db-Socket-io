@@ -12,10 +12,13 @@ import Update from "../Formulaire/Projets/Update";
 import Modal from "react-modal";
 import jwt from 'jsonwebtoken';
 import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 Modal.setAppElement("#__next");
 
-export default function Blogcard() {
+export default function Blogcard({test}) {
   const [Bloginfo, setBloginfo] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalIsOpen1, setModalIsOpen1] = useState(false);
@@ -47,8 +50,6 @@ export default function Blogcard() {
 
   useEffect(() => {
     setTimeout(() => {
-      
-    
     async function fetchData() {
       try {
         const response = await axios.get(`${domain}/Addproject`);
@@ -63,7 +64,7 @@ export default function Blogcard() {
 
     fetchData();
     }, 3000);
-  }, []);
+  }, [test=="Projet"]);
 
   async function deletePost(id) {
     try {
@@ -202,7 +203,7 @@ if (token) {
             <button
               className={styles.oui}
               type="submit"
-              onClick={() => deletePost(selectedId)}
+              onClick={test=="Projet"? () => deletePost(selectedId):handleCloseModal}
             >
               <i className="fas fa-check"></i>&ensp;Oui
             </button>

@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router'
-import Update from "@/components/Formulaire/Resources/employe/Form";
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,11 +9,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
-import Modal from "react-modal";
 import styles from "../../styles/Blog.module.css";
 import style from "@/styles/Resource.module.css";
+import Modal from "react-modal";
 import domain from "@/utils/config";
 import axios from "axios";
+import Form1 from "@/components/Formulaire/Resources/matriel/Form";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -23,7 +22,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 16,
+    fontSize: 14,
   },
 }));
 
@@ -37,26 +36,34 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
 
+const rows = [
+  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
+  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  createData('Eclair', 262, 16.0, 24, 6.0),
+  createData('Cupcake', 305, 3.7, 67, 4.3),
+  createData('Gingerbread', 356, 16.0, 49, 3.9),
+];
 
 
 export default function CustomizedTables({donne}) {
-  const [modif,setmodif] = useState(false);
-  const [supp,setsupp] = useState(false);
-  const [info,setinfo] = useState([]);
-  const [selected,setselected] = useState(null);
-  const router = useRouter()
+const [info,setinfo] = useState([]);
+const [employer, setemployer] = useState(false);
+const [supp,setsupp] = useState(false);
+const [selected,setselected] = useState(null);
 
-  const handleOpenModalemp = (info) => {
-    setmodif(true);
-    setinfo(info)
-  };
+const handleOpenModalemp = (info) => {
+  setemployer(true);
+  setinfo(info)
+};
 
-  const handleCloseModalemp = () => {
-    setmodif(false);
-  };
-
-  const handleOpenModalsupp = (id) => {
+const handleCloseModalemp = () => {
+  setemployer(false);
+};
+ const handleOpenModalsupp = (id) => {
     setselected(id);
     setsupp(true);
   };
@@ -67,7 +74,8 @@ export default function CustomizedTables({donne}) {
 
   async function deletePost(id) {
     try {
-      await axios.delete(`${domain}/resource/Employe/${id}`);
+      await axios.delete(`${domain}/Addmatriel/${id}`);
+      setsupp(false);
       router.reload();
     } catch (error) {
       console.log(error);
@@ -80,56 +88,55 @@ export default function CustomizedTables({donne}) {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Les employes</StyledTableCell>
-            <StyledTableCell align="center">Telephones</StyledTableCell>
-            <StyledTableCell align="center">Types</StyledTableCell>
-            <StyledTableCell align="center">Prix&nbsp;(Jour)</StyledTableCell>
-            <StyledTableCell align="center" >RIB &ensp;Bancaire</StyledTableCell>
-            <StyledTableCell align="center" >Email</StyledTableCell>
+            <StyledTableCell>Mon Stock</StyledTableCell>
+            <StyledTableCell align="center">Description</StyledTableCell>
+            <StyledTableCell align="center">unitées</StyledTableCell>
+            <StyledTableCell align="center">Quantité</StyledTableCell>
+            <StyledTableCell align="center" >Prix</StyledTableCell>
             <StyledTableCell align="center" ></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {donne.map((row) => (
             <StyledTableRow key={row.id}>
-              <StyledTableCell component="th" scope="row">{row.nom}&ensp;{row.prenom}</StyledTableCell>
-              <StyledTableCell align="center">{row.tel}</StyledTableCell>
-              <StyledTableCell align="center">{row.type}</StyledTableCell>
+              <StyledTableCell component="th" scope="row">{row.nom}</StyledTableCell>
+              <StyledTableCell align="center">{row.desc}</StyledTableCell>
+              <StyledTableCell align="center">par kilogram</StyledTableCell>
+              <StyledTableCell align="center">{row.mat}</StyledTableCell>
               <StyledTableCell align="center">{row.price}</StyledTableCell>
-              <StyledTableCell align="center">{row.RIB}</StyledTableCell>
-              <StyledTableCell align="center">{row.email}</StyledTableCell>
               <StyledTableCell align="center">
+                  
                   <Button variant="contained" className={styles.edit2} onClick={()=>{handleOpenModalemp(row)}}>
                     <i className="fas fa-edit"></i>
                   </Button>&ensp;&ensp;
 
-                  <Button variant="contained" className={styles.supp2} onClick={()=>{handleOpenModalsupp(row.id)}}>
+                  <Button variant="contained" className={styles.supp2}  onClick={()=>{handleOpenModalsupp(row.id)}}>
                     <i className="fas fa-trash-alt"></i>
                   </Button>
 
               </StyledTableCell>
+          
             </StyledTableRow>
           ))}
         </TableBody>
       </Table>
-      </TableContainer>
-      <Modal
-      isOpen={modif}
-      onRequestClose={handleCloseModalemp}
-      className={style.modal}
-      overlayClassName={style.overlay}
-      >
-      <Update information={info} test={"modif"}></Update>
-      </Modal>
-
-      <Modal
+    </TableContainer>
+     <Modal
+     isOpen={employer}
+     onRequestClose={handleCloseModalemp}
+     className={style.modalI}
+     overlayClassName={style.overlay}
+   >
+     <Form1 test="Modifier" information={info}></Form1>
+   </Modal>
+   <Modal
       isOpen={supp}
       onRequestClose={handleCloseModalsupp}
       className={styles.modal}
       overlayClassName={styles.overlay}
       >
        <div className={styles.header}>
-          <h2 className={styles.titreform}>Vous voulez supprimez ce projet</h2>
+          <h2 className={styles.titreform}>Vous voulez supprimez ce stock</h2>
           <hr className={styles.hr}></hr>
           <div className={styles.taper}>
             <button

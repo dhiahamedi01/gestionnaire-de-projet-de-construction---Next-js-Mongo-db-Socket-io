@@ -84,7 +84,7 @@ function Calendrier() {
     }
     const forecastDate = date.format('YYYY-MM-DD');
     const forecast = weatherData.forecast.forecastday.find(day => day.date === forecastDate);
-    if (forecast && forecast.day.avgtemp_c <= 10) {
+    if (forecast && forecast.day.avgtemp_c <= 30) {
       return true;
     }
 

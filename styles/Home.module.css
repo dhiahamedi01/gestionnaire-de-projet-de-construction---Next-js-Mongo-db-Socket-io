@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .text{
   text-align: center;
   color: #000000;
@@ -45,12 +46,49 @@
     text-decoration: none;
     outline: none;
   }
-  @media screen and (min-width: 768px) {
+  .title{
+    text-align: center;
+    width: 90%;
+    padding-left: 33%;
+    display: flex;
+  }
+  .soutitre{
+    text-align: center;
+  }
+  @media screen and (min-width: 500px) {
     .container {
       justify-content: space-between;
     }
+    /*.title{
+      padding-left: 7%;
+    }*/
+   
   }
-  
+  .back{
+    width: 200px;
+    height: 130px;
+    border-radius: 1rem;
+    color: #000000;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.1);
+    font-family: 'Bebas Neue', 'cursive';
+    align-items: center;padding: 3%;
+
+  }
+  .kimajet{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 28%;
+    margin-top: 3%;
+    width: 60%;
+
+  }
+  .logo{
+    font-size: 40px;
+
+  }
   @media screen and (min-width: 1024px) {
     .container {
       justify-content: flex-start;

@@ -43,8 +43,9 @@
 }
 .alert{
 	height: 50px;
-	width: 100%;
+	width: 92.5%;
 	position: relative;
+	margin-left: 4%;
 }
 .inscription{
 	width: 100%;
@@ -57,9 +58,6 @@
 .header{
 	position: relative;
 	margin-top: 30%;
-}
-.alert{
-	margin-left: 4%;
 }
 .cnx{
 	margin-top: 7%;

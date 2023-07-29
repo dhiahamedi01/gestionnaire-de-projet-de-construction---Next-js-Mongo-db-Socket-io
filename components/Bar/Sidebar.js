@@ -66,7 +66,7 @@ export default function Sidebar() {
       </div>
       <ul className={style.navlinks}>
         <li>
-          <Link href={{ pathname: '/' }}>
+          <Link href={{ pathname: '/' }} className={style.active}>
             <i className="fas fa-tachometer-alt" aria-hidden="true"></i>
             <span className={style.span}>Dashboard</span>
           </Link>
@@ -84,12 +84,6 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link href={{ pathname: 'http://localhost:3000/messagerie/Chat' }}>
-            <i className="fas fa-envelope"></i>
-            <span className={style.span}>Messagerie</span>
-          </Link>
-        </li>
-        <li>
           <Link href={{ pathname: 'http://localhost:3000/Notification' }} onClick={InitNotif}>
           <Badge badgeContent={count} color="error">
           &ensp; &ensp;<NotificationsIcon style={{color:'white'}}/>
@@ -100,7 +94,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link href={{ pathname: '/' }} className={style.active}>
+          <Link href={{ pathname: '/' }}  >
             <i className="fas fa-tasks"></i>
             <span className={style.span}>
               WEAVERS CPM<span onClick={Dropdown}>{icon}</span>
@@ -117,23 +111,23 @@ export default function Sidebar() {
                   className={style.active2}
                 >
                   <i className="fas fa-plus"></i>
-                  <span className={style.span}>Ajouter un projet</span>
+                  <span className={style.span}>Gérer mes projets</span>
+                </Link>
+              </li>
+              <li>
+                <Link href={{ pathname: 'http://localhost:3000/Administrateur/CPM/Activite' }}>
+                <i className="fas fa-spinner"></i>
+                  <span className={style.span}>Gérer mes activités</span>
                 </Link>
               </li>
               <li>
                 <Link href={{ pathname: 'http://localhost:3000/Administrateur/CPM/Resource' }}>
                   <i className="fas fa-cogs"></i>
-                  <span className={style.span}>Ajouter des Resources</span>
+                  <span className={style.span}>Gérer mes Resources</span>
                 </Link>
               </li>
               <li>
-                <Link href={{ pathname: '/' }}>
-                  <i className="fas fa-spinner"></i>
-                  <span className={style.span}>Ajouter une activité</span>
-                </Link>
-              </li>
-              <li>
-                <Link href={{ pathname: '../CPM/Suivre' }}>
+                <Link href={{ pathname: 'http://localhost:3000/Administrateur/CPM/Suivre' }}>
                   <i className="far fa-eye"></i>
                   <span className={style.span}>suivie d'une activité</span>
                 </Link>

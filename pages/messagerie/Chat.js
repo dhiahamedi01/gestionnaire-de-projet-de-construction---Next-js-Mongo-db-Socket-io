@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Navbar from "@/components/Bar/Navbar";
-import Sidebar from "@/components/Bar/Sidebar";
+import Sidebar from "@/components/Bar/Sidebar1";
 import Msg from "../../components/messagerie/Msg";
 import User from "../../components/messagerie/User";
 import User1 from "../../components/messagerie/User1";

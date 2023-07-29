@@ -1,0 +1,42 @@
+#flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navi{
+    padding: 0 50px;
+    width: 100%;
+    background-color:#e09900;
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.call,.email,.twitter,.facebook{
+    justify-content: space-between;
+}
+.left > div + div,.right > div {
+    margin-left: 40px;
+    justify-content: space-between;
+}
+.left > div:hover,.right > div:hover{
+    color: black;
+    transition: all 0.5S;
+} 
+.span{
+    margin-left: 10px;
+}
+@media (max-width: 1000px){
+    .span{
+      margin-left: 10px;
+    }
+    .left > div + div,.right > div, .email {
+        font-size: 8.5px;
+    }
+    .navi{
+        padding: 0 20px;
+    }
+    .left{
+        margin-right: 10px;
+    }
+  }

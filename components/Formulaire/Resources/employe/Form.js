@@ -2,7 +2,6 @@ import style from "@/styles/Responsable.module.css";
 import styles from "@/styles/Resource.module.css";
 import domain from "@/utils/config";
 import axios from "axios";
-import emp from './infoEmp'
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -18,8 +17,7 @@ import FormLabel from '@mui/material/FormLabel';
 
 
 const Form = ({information,test}) => {
-  
-  const [info, setinfo] = useState(emp());
+
   const [nom, setnom] = useState('')
   const [prenom, setprenom] = useState('');
   const [tel, settel] = useState('');
@@ -78,7 +76,7 @@ const Form = ({information,test}) => {
   return (
     <>
     <form className={style.form}> 
-    <h1 className={style.title2}>Ajouter employée</h1>
+    <h1 className={style.title2}>{test} employée</h1>
     <div className={style.sousForm}>
       <div className={style.groupe1}>
       <TextField
@@ -179,8 +177,8 @@ const Form = ({information,test}) => {
      </FormControl>
      </div>
 
-     <Button variant="contained" disableElevation className={style.btn} onClick={test=="modif"? modif:send}>
-        <h3 className={style.title2}>{test === "modif" ? 'Modifier employée' : 'Ajouter employée'}</h3>
+     <Button variant="contained" disableElevation className={style.btn} onClick={test=="Modifier"? modif:send}>
+        <h3 className={style.title2}>{test === "Modifier" ? 'Modifier employée' : 'Ajouter employée'}</h3>
       </Button>
     </div>
   </form>

@@ -80,11 +80,63 @@ export default function Home() {
           </div>
           <div className={style.minigroupe}>
             <div className={style.titre}>
-              <h1 className={style.title}>Societé:</h1>
+              <h1 className={style.title}>Societe:</h1>
+
               <hr className={style.hr}></hr>
+              <div className={style.utilisateur}>
+              <div className={style.block}>
+                <h4 className={style.h4}>
+                <i className="fas fa-user" style={{color:'#e09900'}}></i>&ensp;Societe:
+                </h4 >
+                <span className={style.span}>Terminal</span>
+              </div>
+              <div className={style.block}>
+              <h4 className={style.h4}>
+              <i className="fas fa-user" style={{color:'#e09900'}}></i>Type:
+              </h4>
+              <span className={style.span}>Desgin interieure</span> 
+              </div>
+              <div className={style.block}>
+              <h4><i class="fas fa-phone"  style={{color:'#e09900'}}></i></h4>&ensp;
+              <h4 className={style.h4}>
+              Localisation:
+              </h4> 
+              <span className={style.span}>Tunis</span> 
+              </div>
+              </div>
             </div>
           </div>
+          <div className={style.minigroupe}>
+            <div className={style.titre}>
+              <h1 className={style.title}>Utilisateur:</h1>
+
+              <hr className={style.hr}></hr>
+              <div className={style.utilisateur}>
+              <div className={style.block}>
+                <h4 className={style.h4}>
+                <i className="fas fa-user" style={{color:'#e09900'}}></i>&ensp;nom:
+                </h4 >
+                <span className={style.span}>test</span>
+              </div>
+              <div className={style.block}>
+              <h4 className={style.h4}>
+              <i className="fas fa-user" style={{color:'#e09900'}}></i>&ensp;prenom:
+              </h4>
+              <span className={style.span}>test</span> 
+              </div>
+              <div className={style.block}>
+              <h4><i class="fas fa-phone"  style={{color:'#e09900'}}></i></h4>&ensp;
+              <h4 className={style.h4}>
+              téléphone:
+              </h4> 
+              <span className={style.span}>+21699005282</span> 
+              </div>
+              </div>
+            </div>
+          </div>
+       
         </div>
+        
         <div className={style.groupe}>
           <div className={style.minigroupe}>
             <div className={style.titre}>

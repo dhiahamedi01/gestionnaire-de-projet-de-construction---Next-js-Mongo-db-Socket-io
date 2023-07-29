@@ -3,6 +3,7 @@ const matrielSchema = new mongoose.Schema({
     id: { type: Number, unique: true, required: true },
     nom : String,
     desc: String,
+    unit: String,
     mat: Number,
     price : Number,
 })

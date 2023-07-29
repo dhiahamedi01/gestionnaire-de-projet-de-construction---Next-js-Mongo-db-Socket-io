@@ -4,7 +4,7 @@ import axios from "axios"
 import Button from "@mui/material/Button";
 import Modal from "react-modal";
 import Navbar from "@/components/Bar/Navbar";
-import Tab from "@/components/Table/Tab";
+import Tab from "@/components/Table/Employe";
 import Sidebar from "@/components/Bar/Sidebar";
 import Form from "@/components/Formulaire/Resources/employe/Form";
 import styles from "@/styles/Home.module.css";
@@ -61,7 +61,7 @@ export default function Resource() {
         className={styless.modal2}
         overlayClassName={styless.overlay}
       >
-        <Form test={"ajout"}></Form>
+        <Form test={"Ajouter"}></Form>
       </Modal>
     </div>
   );

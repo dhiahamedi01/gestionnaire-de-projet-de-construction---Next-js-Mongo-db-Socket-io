@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+.bande{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /*margin-top: -90px;*/
+}
+.b1{
+  background-color: rgb(31, 31, 31);
+  width: 33.5%;
+  height: 200px;
+  color: #fdbe33;
+  justify-content: center;
+  align-items: center;
+}
+.b1 .h2{
+  text-align: center;
+  margin: 40px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+.b1 .p{
+  text-align: center;
+  margin-top: -30px;
+  font-family: 'Oswald', sans-serif;
+}
+.b2{
+   background-color: #fdbe33;
+    width: 33%;
+    height: 200px;
+    color:rgb(31, 31, 31);
+}
+.b2 .h2{
+  text-align: center;
+  margin: 40px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+.b2 .p{
+  text-align: center;
+  margin-top: -30px;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(31, 31, 31);
+}
+.b3{
+    background-color: rgb(31, 31, 31);
+    width: 33.5%;
+    height: 200px;
+    color: #fdbe33;
+    
+}
+.b3 .h2{
+  text-align: center;
+  margin: 40px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+.b3 .p{
+  text-align: center;
+  margin-top: -30px;
+  font-family: 'Oswald', sans-serif;
+}
+@media (max-width: 1000px) {
+.bande{
+  display: contents;
+}
+.b1{
+  width: 100%;
+  padding-top: 3px;
+  font-size: 20px;
+}
+.b2{
+  width: 100%;
+  
+  padding-top: 3px;
+  font-size: 20px;
+}
+.b3{
+  width: 100%;
+  padding-top: 3px;
+  font-size: 20px;
+}
+}

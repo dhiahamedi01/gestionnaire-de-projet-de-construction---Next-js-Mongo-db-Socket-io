@@ -20,8 +20,9 @@ export default function Resource() {
       <Link href={{ pathname: '../CPM/Resource/Stock'}} className={styles.link}>
         <Card ch="Stock" ch1="/img/stock.svg"></Card>
       </Link>
-      
+      <Link href={{ pathname: '../CPM/Resource/Equipement'}} className={styles.link}>
         <Card ch="equipement" ch1="/img/equipement.svg"></Card>
+      </Link>
       </div>
     </>
   );

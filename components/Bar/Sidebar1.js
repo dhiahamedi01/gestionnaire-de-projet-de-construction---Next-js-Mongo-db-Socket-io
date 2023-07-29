@@ -28,7 +28,7 @@ export default function Sidebar() {
         </div>
           <ul className={style.navlinks} >
             <li >
-              <Link href={{ pathname: '/'}} className={style.active}>
+              <Link href={{ pathname: 'http://localhost:3000/Responsable/plannification'}} className={style.active}>
               <i className="far fa-calendar-check"></i>
                 <span className={style.span}>Plannification</span>
               </Link>
@@ -40,7 +40,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href={{ pathname: '/'}}  >
+              <Link href={{ pathname: 'http://localhost:3000/messagerie/Chat'}}  >
                  <i className="fas fa-envelope"></i>
                 <span className={style.span}>Messagerie</span>
               </Link>
@@ -52,7 +52,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href={{ pathname: '/'}} >
+              <Link href={{ pathname: 'http://localhost:3000/Responsable/Activite'}} >
                 <i className="fas fa-spinner"></i>
                 <span className={style.span}>Mes Activités</span>
               </Link>

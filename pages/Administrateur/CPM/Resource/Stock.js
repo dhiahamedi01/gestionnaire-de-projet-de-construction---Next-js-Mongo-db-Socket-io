@@ -4,9 +4,9 @@ import axios from "axios"
 import Button from "@mui/material/Button";
 import Modal from "react-modal";
 import Navbar from "@/components/Bar/Navbar";
-import Tab1 from "@/components/Table/Tab1";
+import Tab1 from "@/components/Table/Stock";
 import Sidebar from "@/components/Bar/Sidebar";
-import Form1 from "@/components/Formulaire/Resources/employe/Form";
+import Form1 from "@/components/Formulaire/Resources/matriel/Form";
 import styles from "@/styles/Home.module.css";
 import style from "@/styles/Resource.module.css";
 
@@ -57,10 +57,10 @@ export default function Resource() {
       <Modal
         isOpen={employer}
         onRequestClose={handleCloseModalemp}
-        className={style.modal}
+        className={style.modalI}
         overlayClassName={style.overlay}
       >
-        <Form1></Form1>
+        <Form1 test="Ajoute"></Form1>
       </Modal>
     </div>
   );

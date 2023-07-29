@@ -21,6 +21,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     setloading("loading...")
+    router.push('../Login');
     try {
       const response = await axios.post(`${domain}/Login/auth`, {email,password});
       const token = response.data.token;
